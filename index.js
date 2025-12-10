@@ -16,6 +16,6 @@ app.post('/test', (req, res) => {
 });
 
 // start server
-app.listen(3000, '0.0.0.0', () => console.log("Server running"));
+app.listen(4000, '0.0.0.0', () => console.log("Server running"));
 
 
