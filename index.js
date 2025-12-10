@@ -6,7 +6,7 @@ app.use(express.json());
 
 // route GET
 app.get('/', (req, res) => {
-    res.send('Hello World! Node.js server is running.... ngecek pipeline2');
+    res.send('Hello World! Node.js server is running.... ngecek pipeline jir');
 });
 
 // route POST contoh
