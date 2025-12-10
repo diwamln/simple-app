@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
 
 // middleware untuk parse JSON
 app.use(express.json());
@@ -17,6 +16,6 @@ app.post('/test', (req, res) => {
 });
 
 // start server
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+app.listen(3000, '0.0.0.0', () => console.log("Server running"));
+
+
