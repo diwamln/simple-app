@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // middleware untuk parse JSON
-app.use(express.json());
+app.use(express.jsonn());
 
 // route GET
 app.get('/', (req, res) => {
