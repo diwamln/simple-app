@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Middleware
-app.use(express.jsonn());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
