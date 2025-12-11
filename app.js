@@ -1,21 +1,33 @@
 // app.js
-
 const express = require('express');
 const app = express();
 
-// middleware untuk parse JSON
+// Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// route GET
+// Routes
 app.get('/', (req, res) => {
-    res.send('berhasil');
+    res.send('berhasil'); // Konten bebas diganti
 });
 
-// route POST contoh
 app.post('/test', (req, res) => {
-    const data = req.body;
-    res.json({ message: 'Data received', yourData: data });
+    res.json({
+        message: 'Data received',
+        yourData: req.body
+    });
 });
 
-// Export objek app agar bisa di-require oleh file server.js atau test.js
+// 404 handler
+app.use((req, res) => {
+    res.status(404).json({ error: 'Route not found' });
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Internal server error' });
+});
+
+// Export app tanpa listen (untuk testing)
 module.exports = app;
