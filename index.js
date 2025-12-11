@@ -6,7 +6,7 @@ app.use(express.json());
 
 // route GET
 app.get('/', (req, res) => {
-    res.send('Im Updating');
+    res.send('Im Updatinggggg');
 });
 
 // route POST contoh
