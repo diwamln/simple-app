@@ -18,6 +18,11 @@ app.post('/test', (req, res) => {
     });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
+
 // 404 handler
 app.use((req, res) => {
     res.status(404).json({ error: 'Route not found' });
@@ -29,9 +34,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({ error: 'Internal server error' });
 });
 
-app.get("/health", (req, res) => {
-  res.status(200).send("OK");
-});
 
 
 
