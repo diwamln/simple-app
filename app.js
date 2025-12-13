@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('error'); // Konten bebas diganti
+    res.send('apps versi 3, deploy success jir'); // Konten bebas diganti
 });
 
 app.post('/test', (req, res) => {
