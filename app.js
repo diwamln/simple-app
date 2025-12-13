@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Middleware
-app.use(express.jsonn());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
@@ -28,6 +28,13 @@ app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: 'Internal server error' });
 });
+
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
+
+
 
 // Export app tanpa listen (untuk testing)
 module.exports = app;
