@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
-  res.send('adili jokowi');
+  res.send('adili jooooookowi');
 });
 
 app.post('/test', (req, res) => {
